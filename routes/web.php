@@ -19,6 +19,7 @@ Route::group(['namespace' => 'Admin'],function(){
         'uses' => 'HomeController@index',
         'as' => 'admin.home',
     ]);
+    Route::resource('/admin/user','UserController');
     Route::resource('/admin/post','PostController');
     Route::resource('/admin/category','CategoryController');
     Route::resource('/admin/tag','TagController');

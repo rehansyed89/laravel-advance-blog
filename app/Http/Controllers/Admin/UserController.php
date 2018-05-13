@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\User\tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class TagController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        return view('admin.tag.list');
+        return view('admin.user.list');
     }
 
     /**
@@ -25,7 +24,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        return view('admin.tag.tag');
+        //
     }
 
     /**
@@ -36,17 +35,7 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'name' => 'required',
-            'slug' => 'required|Max:100',
-        ]);
-
-        $tag = new tag();
-
-        $tag->name = $request->name;
-        $tag->slug = $request->slug;
-        $tag->save();
-        return redirect(route('tag.index'));
+        //
     }
 
     /**
