@@ -15,7 +15,8 @@ class TagController extends Controller
      */
     public function index()
     {
-        return view('admin.tag.list');
+        $tags = tag::all();
+        return view('admin.tag.list',compact('tags'));
     }
 
     /**

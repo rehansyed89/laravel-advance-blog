@@ -16,5 +16,8 @@
 <script src="{{ asset('admin/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ asset('admin/plugins/fastclick/fastclick.js') }}"></script>
 <script src="{{ asset('admin/dist/js/app.min.js') }}"></script>
-<script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>
+
 <script src="{{ asset('admin/dist/js/demo.js') }}"></script>
+
+@section('footerSection')
+@show
