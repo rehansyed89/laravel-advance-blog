@@ -21,3 +21,6 @@
 
 @section('footerSection')
 @show
+
+@section('postFooterSection')
+@show

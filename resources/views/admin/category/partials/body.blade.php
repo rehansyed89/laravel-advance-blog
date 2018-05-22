@@ -41,8 +41,16 @@
                                     <td>{{ $loop->index +1 }}</td>
                                     <td>{{ $category->name }}</td>
                                     <td>{{ $category->slug }}</td>
-                                    <td>Edit</td>
-                                    <td>Delete</td>
+                                    <td><a href="{{ route('category.edit', $category->id) }}"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                    <td>
+                                        <form id="delete_form_{{ $category->id }}" action="{{ route('category.destroy',$category->id) }}" method="post">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+                                            <a href="" onclick="destroyCategory('delete_form_{{ $category->id }}');">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

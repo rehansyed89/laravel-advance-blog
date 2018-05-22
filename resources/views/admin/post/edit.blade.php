@@ -1,7 +1,9 @@
 @extends('admin.template')
 
 @section('main')
-    @include('admin.post.partials.create_post_form')
+    @include('admin.post.partials.update_post_form',[
+        'post' => $post,
+    ])
 @endsection
 
 @section('postFooterSection')

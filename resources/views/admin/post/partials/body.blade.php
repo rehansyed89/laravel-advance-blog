@@ -45,8 +45,16 @@
                                     <td>{{ $post->subtitle }}</td>
                                     <td>{{ $post->slug }}</td>
                                     <td>{{ $post->created_at }}</td>
-                                    <td>Edit</td>
-                                    <td>Delete</td>
+                                    <td><a href="{{ route('post.edit', $post->id) }}"><span class="glyphicon glyphicon-edit"></span></a></td>
+                                    <td>
+                                        <form id="delete_form_{{ $post->id }}" action="{{ route('post.destroy',$post->id) }}" method="post">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+                                            <a href="" onclick="destroyPost('delete_form_{{ $post->id }}');">
+                                               <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
