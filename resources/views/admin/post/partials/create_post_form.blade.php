@@ -31,18 +31,36 @@
                 </div>
 
                 <div class="col-lg-6">
+                    <br>
                     <div class="form-group">
-                        <label for="image">File input</label>
-                        <input type="file" id="image" name="image">
+                        <div class="pull-right">
+                            <label for="image">File input</label>
+                            <input type="file" id="image" name="image">
+                        </div>
+                        <div class="checkbox pull-left">
+                            <label>
+                                <input type="checkbox" id="status" name="status" value="1"> Publish
+                            </label>
+                        </div>
                     </div>
-                    <br><br>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="status" name="status"> Publish
-                        </label>
+                    <br>
+                    <div class="form-group" style="margin-top: 18px;">
+                        <label>Tags</label>
+                        <select class="form-control select2 select2-hidden-accessible" multiple="" data-placeholder="Select a Tag" style="width: 100%;" tabindex="-1" aria-hidden="true" name="post_tags[]">
+                            @foreach($tags as $tag)
+                                <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-top: 18px;">
+                        <label>Categories</label>
+                        <select class="form-control select2 select2-hidden-accessible" multiple="" data-placeholder="Select a Category" style="width: 100%;" tabindex="-1" aria-hidden="true" name="category_posts[]">
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
-
             </div>
             <div class="box">
                 <div class="box-header">
