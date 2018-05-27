@@ -8,9 +8,16 @@
 @endsection
 
 @section('postFooterSection')
-    <script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>
+ {{--   <script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>--}}
     <script src="{{ asset('admin/plugins/select2/select2.full.min.js') }}"></script>
+    <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
     <script >
-        $(".select2").select2();
+      $(function () {
+          CKEDITOR.replace('editor1',{
+              height: 800
+          });
+          $(".textarea").wysihtml5();
+      });
+      $(".select2").select2();
     </script>
 @endsection

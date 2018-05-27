@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <div class="box-body pad">
-                    <textarea class="textarea" id="body" name="body" style="width: 100%; height: 500px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    <textarea id="editor1" name="body" style="width: 100%; height: 600px !important; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                 </div>
             </div>
             <div class="box-footer">
@@ -80,16 +80,3 @@
         </form>
     </div>
 </div>
-
-
-<script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
-
-<script>
-    $(function () {
-        // Replace the <textarea id="editor1"> with a CKEditor
-        // instance, using default configuration.
-        CKEDITOR.replace('editor1');
-        //bootstrap WYSIHTML5 - text editor
-        $(".textarea").wysihtml5();
-    });
-</script>

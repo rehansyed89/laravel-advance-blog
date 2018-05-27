@@ -49,7 +49,13 @@
                         <label>Tags</label>
                         <select class="form-control select2 select2-hidden-accessible" multiple="" data-placeholder="Select a Tag" style="width: 100%;" tabindex="-1" aria-hidden="true" name="post_tags[]">
                             @foreach($tags as $tag)
-                                <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                                <option value="{{ $tag->id }}"
+                                    @foreach($post->tags as $postTags)
+                                        @if($postTags->id == $tag->id)
+                                            selected
+                                        @endif
+                                    @endforeach
+                                >{{ $tag->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -57,7 +63,13 @@
                         <label>Categories</label>
                         <select class="form-control select2 select2-hidden-accessible" multiple="" data-placeholder="Select a Category" style="width: 100%;" tabindex="-1" aria-hidden="true" name="category_posts[]">
                             @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option value="{{ $category->id }}"
+                                    @foreach($post->categories as $postCategories)
+                                        @if($postCategories->id == $category->id)
+                                            selected
+                                        @endif
+                                    @endforeach
+                                >{{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -73,7 +85,7 @@
                     </div>
                 </div>
                 <div class="box-body pad">
-                    <textarea class="textarea" id="body" name="body" style="width: 100%; height: 500px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{ $post->body }}</textarea>
+                    <textarea id="editor1" name="body" style="width: 100%; height: 500px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{ $post->body }}</textarea>
                 </div>
             </div>
             <div class="box-footer">
