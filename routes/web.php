@@ -7,7 +7,7 @@ Route::group(['namespace' => 'User'],function(){
         'as' => 'home.page',
     ]);
 
-    Route::get('/post', [
+    Route::get('/post/{post}', [
         'uses' => 'PostController@index',
         'as' => 'post.page',
     ]);

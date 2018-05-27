@@ -13,4 +13,9 @@ class post extends Model
     public function categories(){
         return $this->belongsToMany('App\Model\User\category','category_posts')->withTimestamps();
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

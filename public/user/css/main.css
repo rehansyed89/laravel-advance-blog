@@ -1,0 +1,18 @@
+.tag_h3 {
+    font-family: "Raleway", sans-serif !important;
+    color: #353535 !important;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e5e5e5;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: .9em;
+    font-weight: 400;
+    color: #979797;
+    margin-right: 10px;
+}
+.tag__extra_margin{
+    margin-top: 10px;
+}

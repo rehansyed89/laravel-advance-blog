@@ -17,7 +17,7 @@
                     <a href="about.html">About</a>
                 </li>
                 <li>
-                    <a href="{{ route('post.page') }}">Sample Post</a>
+                    <a href="#">Sample Post</a>
                 </li>
                 <li>
                     <a href="contact.html">Contact</a>

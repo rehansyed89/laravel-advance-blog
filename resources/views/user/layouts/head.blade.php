@@ -8,6 +8,7 @@
 
 <!-- Bootstrap Core CSS -->
 <link href="{{ asset('user/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('user/css/main.css') }}" rel="stylesheet">
 
 <!-- Theme CSS -->
 <link href="{{ asset('user/css/clean-blog.min.css') }}" rel="stylesheet">

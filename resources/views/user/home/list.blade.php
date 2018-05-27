@@ -6,5 +6,7 @@
     @include('user.home.partials.header')
 @endsection
 @section('main')
-    @include('user.home.partials.body')
+    @include('user.home.partials.body',[
+        'posts' => $posts,
+    ])
 @endsection
