@@ -27,7 +27,7 @@
                     <small>Created at {{ $post->created_at->diffForHumans() }}</small>
                     <small class="pull-right" style="margin-right:20px">
                         @foreach($post->categories as $postCategory)
-                            {{ $postCategory->name }}
+                            <a href="{{ route('post.category.page',$postCategory->slug) }}">{{ $postCategory->name }}</a>
                         @endforeach
                     </small>
                     {!!  $post->body !!}
@@ -35,7 +35,7 @@
 					<div class="tag">
 						<h3 class="tag__h3">Tags</h3>
 						@foreach($post->tags as $postTag)
-							<small class="tag__body">{{ $postTag->name }}</small>
+							<a href="{{ route('post.tag.page',$postTag->slug) }}"><small class="tag__body">{{ $postTag->name }}</small></a>
 						@endforeach
 					</div>
                 </div>

@@ -7,6 +7,16 @@ Route::group(['namespace' => 'User'],function(){
         'as' => 'home.page',
     ]);
 
+    Route::get('/post/tag/{tag}', [
+        'uses' => 'HomeController@tag',
+        'as' => 'post.tag.page',
+    ]);
+
+    Route::get('/post/category/{category}', [
+        'uses' => 'HomeController@category',
+        'as' => 'post.category.page',
+    ]);
+
     Route::get('/post/{post}', [
         'uses' => 'PostController@index',
         'as' => 'post.page',
