@@ -100,15 +100,20 @@ class PostController extends Controller
             'subtitle' => 'required',
             'slug' => 'required|Max:100',
             'body' => 'required',
+            'image' => 'required',
         ]);
 
-        $post = post::find($id);
+        if($request->hasFile('image')){
+            $imageName = $request->image->store('public');
+        }
 
+        $post = post::find($id);
         $post->title = $request->title;
         $post->subtitle = $request->subtitle;
         $post->slug = $request->slug;
         $post->body = $request->body;
         $post->status = $request->status;
+        $post->image = $imageName;
         $post->tags()->sync($request->post_tags);
         $post->categories()->sync($request->category_posts);
         $post->save();

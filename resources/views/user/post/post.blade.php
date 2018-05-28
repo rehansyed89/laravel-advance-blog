@@ -1,6 +1,6 @@
 @extends('user.template')
 
-@section('header-image',asset('user/img/post-bg.jpg') )
+@section('header-image',Storage::disk('local')->url($post->image))
 @section('head')
 <link href="{{ asset('user/css/prism.css') }}" rel="stylesheet">
 @endsection

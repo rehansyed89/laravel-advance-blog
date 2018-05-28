@@ -12,7 +12,7 @@
             <h3 class="box-title">Post</h3>
         </div>
         @include('common.error')
-        <form role="form" action="{{ route('post.update',$post->id) }}" method="post">
+        <form role="form" action="{{ route('post.update',$post->id) }}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
             {{method_field('PUT')}}
             <div class="box-body">
