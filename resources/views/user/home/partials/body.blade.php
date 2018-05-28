@@ -12,9 +12,7 @@
         @endforeach
 
         <ul class="pager">
-            <li class="next">
-                <a href="#">Older Posts &rarr;</a>
-            </li>
+            <li class="next">{{ $posts->links() }}</li>
         </ul>
     </div>
 </div>

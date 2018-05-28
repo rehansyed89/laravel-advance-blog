@@ -1,9 +1,13 @@
-.tag_h3 {
+.tag{
+	margin-bottom:40px;
+}
+
+.tag__h3 {
     font-family: "Raleway", sans-serif !important;
     color: #353535 !important;
 }
 
-.tag {
+.tag__body {
     display: inline-block;
     background-color: #e5e5e5;
     text-decoration: none;
@@ -13,6 +17,7 @@
     color: #979797;
     margin-right: 10px;
 }
-.tag__extra_margin{
-    margin-top: 10px;
-}
+
+article .container .row img{
+	width:100%;
+}	

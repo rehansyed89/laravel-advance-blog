@@ -10,7 +10,7 @@
 @section('postFooterSection')
  {{--   <script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>--}}
     <script src="{{ asset('admin/plugins/select2/select2.full.min.js') }}"></script>
-    <script src="https://cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
+    <script src="{{ asset('admin/ckeditor/ckeditor.js') }}"></script>
     <script >
       $(function () {
           CKEDITOR.replace('editor1',{
