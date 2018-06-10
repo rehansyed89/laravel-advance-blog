@@ -23,6 +23,7 @@
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Assigned Roles</th>
+                                <th>Status</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -40,6 +41,7 @@
 
                                         @endforeach
                                     </td>
+                                    <td>{{ ($user->status) ? 'Active' : 'Not Active' }}</td>
                                     <td><a href="{{ route('user.edit', $user->id) }}"><span class="glyphicon glyphicon-edit"></span></a></td>
                                     <td>
                                         <form id="delete_form_{{ $user->id }}" action="{{ route('user.destroy',$user->id) }}" method="post">
@@ -60,6 +62,7 @@
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Assigned Roles</th>
+                                <th>Status</th>
                                 <th>Delete</th>
                                 <th>Edit</th>
                             </tr>
