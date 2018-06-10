@@ -1,5 +1,7 @@
 @extends('admin.template')
 
 @section('main')
-    @include('admin.home.partials.body')
+    @include('admin.user.partials.create_user_form',[
+        'roles' =>$roles,
+    ])
 @endsection

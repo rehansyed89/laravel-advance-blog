@@ -29,10 +29,15 @@ Route::group(['namespace' => 'Admin'],function(){
         'uses' => 'HomeController@index',
         'as' => 'admin.home',
     ]);
+    Route::resource('/admin/permission','PermissionController');
+    Route::resource('/admin/role','RoleController');
     Route::resource('/admin/user','UserController');
     Route::resource('/admin/post','PostController');
     Route::resource('/admin/category','CategoryController');
     Route::resource('/admin/tag','TagController');
+
+    Route::get('admin-login', 'Auth\LoginController@showLoginForm')->name('admin.login');
+    Route::post('admin-login', 'Auth\LoginController@login');
 });
 
 
